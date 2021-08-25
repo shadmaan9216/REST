@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Show</title>
+    <style>
+        body {
+            background: url(https://images.unsplash.com/photo-1611604548018-d56bbd85d681?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            font-size: larger;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    </h1>
+    <h1>
+        <em>
+            <%=comment.comment%>
+        </em> -- <%= comment.username %>
+    </h1>
+    <a href="/comments">Back to home</a>
+
+    <a href="/comments/<%=comment.id%>/edit">Edit Comment</a>
+    <form method="POST" action="/comments/<%= comment.id%>?_method=DELETE">
+        <button>DELETE</button>
+    </form>
+</body>
+
+</html>
